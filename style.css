@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-dark-blue-mb: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue-cb: hsl(244, 38%, 16%);
+  --Soft-violet-assent: hsl(277, 64%, 61%);
+  --White-mh: hsl(0, 0%, 100%);
+  --Slightly-transparent-white-mp: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white-sh: hsla(0, 0%, 100%, 0.6);
+
+  --font-family-1: "Inter", sans-serif;
+  --font-family-2: "Lexend Deca", sans-serif;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 15px;
+  font-family: var(--font-family-1);
+  background-color: var(--Very-dark-blue-mb) !important;
+  padding: 1rem !important;
+}
+.box {
+  width: 1000px;
+  background-color: var(--Dark-desaturated-blue-cb);
+  border-radius: 10px;
+}
+.colum1 {
+  flex: 50%;
+  background-color: var(--Dark-desaturated-blue-cb);
+  border-radius: 10px 0px 0px 10px;
+}
+.colum2 {
+  flex: 50%;
+  background-image: url(./Images/image-header-desktop.jpg);
+  background-color: var(--Soft-violet-assent) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border-radius: 0px 10px 10px 0px;
+
+  height: 400px;
+}
+.text h1 {
+  color: white;
+}
+.text span {
+  color: var(--Soft-violet-assent);
+}
+.content p {
+  color: var(--Slightly-transparent-white-sh);
+}
+.count span {
+  color: white;
+  font-size: 20px;
+}
+.count p {
+  color: var(--Slightly-transparent-white-sh);
+  font-size: 13px;
+}
+.count {
+  width: 100%;
+}
+.first {
+  width: 33%;
+}
+.secound {
+  width: 33%;
+}
+.third {
+  width: 33%;
+}
+@media (max-width: 768px) {
+  .box {
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
+  .colum1 {
+    border-radius: 0px 0px 10px 10px;
+  }
+  .colum2 {
+    min-height: 200px;
+    border-radius: 20px;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(./Images/image-header-mobile.jpg);
+  }
+}
+@media (max-width: 320px) {
+  .count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text {
+    text-align: center;
+  }
+}
